@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/nearFocalTitle"
+        android:layout_width="189dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="45dp"
+        android:text="@string/near_focal_distance"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/resultNearFocal"
+        app:layout_constraintEnd_toStartOf="@+id/resultNearFocal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/resultNearFocal" />
+
+    <TextView
+        android:id="@+id/farFocalTitle"
+        android:layout_width="185dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="45dp"
+        android:text="@string/far_focal_distance"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/resultFarFocal"
+        app:layout_constraintEnd_toStartOf="@+id/resultFarFocal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/resultFarFocal" />
+
+    <TextView
+        android:id="@+id/dofTitle"
+        android:layout_width="168dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="45dp"
+        android:text="@string/depth_of_field"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/resultDoF"
+        app:layout_constraintEnd_toStartOf="@+id/resultDoF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/resultDoF" />
+
+    <TextView
+        android:id="@+id/hyperTitle"
+        android:layout_width="180dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="45dp"
+        android:text="@string/hyperfocal_distance"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/resultHyper"
+        app:layout_constraintEnd_toStartOf="@+id/resultHyper"
+        app:layout_constraintHorizontal_bias="0.611"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/resultHyper"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/resultNearFocal"
+        android:layout_width="175dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/enter_all_values"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resultFarFocal"
+        android:layout_width="175dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/enter_all_values"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultNearFocal" />
+
+    <TextView
+        android:id="@+id/resultDoF"
+        android:layout_width="174dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/enter_all_values"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultFarFocal" />
+
+    <TextView
+        android:id="@+id/resultHyper"
+        android:layout_width="172dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/enter_all_values"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultDoF" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="391dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.392" />
+
+    <TextView
+        android:id="@+id/displayMsg"
+        android:layout_width="192dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:text="Photo details with"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <TextView
+        android:id="@+id/cocTitle"
+        android:layout_width="214dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/circle_of_confusion_mm"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/inputCOC"
+        app:layout_constraintEnd_toStartOf="@+id/inputCOC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputCOC" />
+
+    <EditText
+        android:id="@+id/inputCOC"
+        android:layout_width="148dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number|numberDecimal"
+        android:text="@string/_0_029"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userChosen" />
+
+    <TextView
+        android:id="@+id/distanceTitle"
+        android:layout_width="210dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/distance_to_subject_m"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/inputDistance"
+        app:layout_constraintEnd_toStartOf="@+id/inputDistance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputDistance" />
+
+    <TextView
+        android:id="@+id/distanceTitle2"
+        android:layout_width="151dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/selected_aperture"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/inputAperture"
+        app:layout_constraintEnd_toStartOf="@+id/inputAperture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputAperture" />
+
+    <EditText
+        android:id="@+id/inputDistance"
+        android:layout_width="151dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/ex_1_5_for_1_5m"
+        android:importantForAutofill="no"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCOC" />
+
+    <EditText
+        android:id="@+id/inputAperture"
+        android:layout_width="151dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/ex_2_8_for_f2_8"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputDistance" />
+
+    <Button
+        android:id="@+id/calculateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputAperture" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="200dp" />
+
+    <TextView
+        android:id="@+id/userChosen"
+        android:layout_width="254dp"
+        android:layout_height="28dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/displayMsg"
+        app:layout_constraintTop_toTopOf="@+id/displayMsg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
